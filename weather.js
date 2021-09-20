@@ -6,9 +6,9 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 
-var PORT='3005'
-app.listen(PORT,function(){
-    console.log("The server has started at port "+PORT);
+
+app.listen(process.env.PORT || 3005,function(){
+    console.log("The server has started  ");
 })
 
 
