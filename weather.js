@@ -16,7 +16,7 @@ var weather;
 var place;
 var temperature;
 var imgURL;
-app.post("/index",function(request,response){
+app.post("/",function(request,response){
     
     const apikey ="138572201aa5b4b57ae98a64a81621a0";
     var cityname=request.body.cityname;
@@ -35,18 +35,18 @@ app.post("/index",function(request,response){
         //    response.write("The temperature in "+cityname+" is "+ temperature+"<br>");
         //    response.write("<img src="+imgURL+">");
         //    response.send();
-        response.redirect('/index');
+        response.redirect('/');
         });
         
     });
     
 
 })
-app.get("/",function(request,response){
-    response.render('login.ejs');
-    });
+// app.get("/",function(request,response){
+//     response.render('login.ejs');
+//     });
 
-app.get("/index",function(request,response){
+app.get("/",function(request,response){
     response.render('index.ejs',{weather:weather,place:place,temperature:temperature,imgURL:imgURL});
     });
 
