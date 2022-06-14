@@ -11,19 +11,29 @@
 </head>
 
 <body>
-    <div class="mydiv">
+    <div class="container">
+    <div id="citydata">
+       <div class="blur">
     <h1>Enter the city :</h1>
  <form action="/" method="POST">
      <label for="cityname">City Name: </label>   
      <input type="text" name="cityname" value="">
      <button type="submit"  >Submit</button>
     </form>
+    </div>
 </div>
-<div id="myVdiv">
+<div id="cityWeather" style="display: none; color: #FFDEFF;">
+ <div class="container-fluid">
+             <div class="row">
+                 <div class="col-lg-12 mt-5 pt-4">
 <h2>The weather in <u><%=place%></u> is <%=weather%></h2>
 <h2>The temperature in <%=place%> is  <%=temperature%>*C</h2>
 <div class="icon">
 <img src="<%=imgURL%>">
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
  <!--<script>
