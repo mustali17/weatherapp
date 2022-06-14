@@ -17,7 +17,7 @@
  <form action="/" method="POST">
      <label for="cityname">City Name: </label>   
      <input type="text" name="cityname" value="">
-     <button type="button"  class="btn" onclick="myFunction()" >Submit</button>
+     <button type="submit"  class="btn" onclick="myFunction()" >Submit!</button>
     </form>
     </div>
 </div>
@@ -91,7 +91,8 @@
 <script>
     element.addEventListener("click", myFunction);
 
-    function myFunction() {
+    function myFunction(e) {
+    e.preventDefault();
     document.getElementById("cityWeather").style.display = "block";
     document.getElementById("citydata").style.display="none";
 }
