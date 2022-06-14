@@ -39,7 +39,8 @@
 <script>
     element.addEventListener("click", myFunction);
 
-    function myFunction() {
+    function myFunction(e) {
+    e.preventDefault();
     document.getElementById("cityWeather").style.display = "block";
     document.getElementById("citydata").style.display="none";
 }
